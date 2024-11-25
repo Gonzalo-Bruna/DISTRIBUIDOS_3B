@@ -2,6 +2,12 @@
 import numpy as np
 import utility as ut
 import time
+import os
+
+# Ensure the output directory exists
+output_dir = 'output'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
 
 
 def train_sae_layer(data, hidden_nodes, penalty, num_runs):
